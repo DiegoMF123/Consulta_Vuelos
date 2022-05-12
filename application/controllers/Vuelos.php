@@ -24,28 +24,26 @@ class Vuelos extends CI_Controller
 
           $this->load->view('usuario/vuelosPendientes', $data);
         } else {
+          $codigoVuelo = $_REQUEST["codigoVuelo"];
           // tenemos otro if para poder realizar una busqueda, segun esa vista
-          if (isset($_REQUEST["codigoVuelo"])) {
+          if ($codigoVuelo == '') {
             // esta variable codigo la llenamos con el valor del name que toma cuando se elige una region de la vista admin y
             // mandamos el id
-            $codigoVuelo = $_REQUEST["codigoVuelo"];
+            //$codigoVuelo = $_REQUEST["codigoVuelo"];
 
-            if ($codigoVuelo == null){
-              header("Location: http://192.168.0.7:8888/Consulta_Vuelos/index.php/vuelos?response=1");
-              die();
-            }
-            // esta varia data muestra los datos del foreach que esta en la vista admin
-            // y mostrará los datos segun el id de la región y solo esos mostrara
-            $data["datosvuelo"] = $this->Model_vuelos->buscarPorCodigoVuelo($codigoVuelo);
-            $data["response"] = trim(isset($_REQUEST["response"]));
-            $this->load->view('usuario/vuelosPendientes', $data);
 
-           
+            header("Location: http://192.168.0.5:8888/Consulta_Vuelos/index.php/vuelos?response=1");
+            die();
+            echo $codigoVuelo;
+
             // code...
           } else {
             // si no se ejecuta nada, se queda normal
+            //$codigoVuelo = $_REQUEST["codigoVuelo"];
+            $data["datosvuelo"] = $this->Model_vuelos->buscarPorCodigoVuelo($codigoVuelo);
             $data["response"] = trim(isset($_REQUEST["response"]));
             $this->load->view('usuario/vuelosPendientes', $data);
+            echo $codigoVuelo;
           }
         }
 

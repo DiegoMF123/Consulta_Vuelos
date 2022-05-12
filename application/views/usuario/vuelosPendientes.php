@@ -19,6 +19,8 @@
     <link href="<?php echo base_url(); ?>/assets/plugins/pace/pace.min.css" rel="stylesheet">
     <script src="<?php echo base_url(); ?>/assets/plugins/pace/pace.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="<?php echo base_url(); ?>assets/js/validar.js"></script>
+    <link href="<?php echo base_url(); ?>assets/css/est.css" rel="stylesheet">
 
     <!-- scropt para Dar color a la tabla en la parte de los encabezados -->
     <style type="text/css">
@@ -34,6 +36,7 @@
             document.getElementById("registrationForm").reset();
         }
     </script>
+    
 
 
 </head>
@@ -145,7 +148,7 @@
 
                                             <div class="col-md-3 col-xs-12">
 
-                                                <input type="text" class="form-control" name="codigoVuelo" id="codigoVuelo" placeholder="Ingrese el código de vuelo" />
+                                                <input type="text" class="form-control" name="codigoVuelo" id="codigoVuelo" placeholder="Ingrese el código de vuelo" required/>
 
                                             </div>
 
@@ -154,7 +157,7 @@
                                                 <!-- Boton filtrar que nos va a servir para poder mandar la peticion a nuestro controlador y que capture nuestros datos
                                                 que estamos solicitando-->
 
-                                                <input type="submit" value="Consultar" class="btn btn-primary">
+                                                <input type="submit" value="Consultar" name="btnSend" id="btnSend" class="btn btn-primary">
                                                 <a href="<?php echo base_url(); ?>index.php/vuelos" type="button" class="btn btn-danger" onclick="limpiarFormulario()">Limpiar</a>
 
 

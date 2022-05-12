@@ -77,8 +77,8 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '192.168.0.7',
-	'username' => 'toor',
+	'hostname' => '192.168.0.15',
+	'username' => 'diegodb',
 	'password' => 'dsmf',
 	'database' => 'db_vuelos',
 	'dbdriver' => 'mysqli',
@@ -96,6 +96,31 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+/*$active_group = 'default';
+$query_builder = TRUE;
+
+$db['default'] = array(
+	'dsn'	=> '',
+	'hostname' => '192.168.0.5',
+	'username' => 'toor',
+	'password' => 'dsmf',
+	'database' => 'db_vuelos',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'development'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);*/
 
 
 /*
