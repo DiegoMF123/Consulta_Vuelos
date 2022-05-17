@@ -18,10 +18,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="forms-container">
         <div class="signin-signup">
           <form  method="GET">
-            <img src="<?php echo base_url(); ?>assets/img/BMP.png" width="600" alt="">
+            <img src="<?php echo base_url(); ?>assets/img/BMP.png" width="500" height="400" alt="">
             <br>
             <br>
-            <img src="<?php echo base_url(); ?>assets/img/User.png" width="160" alt="">
+            <!-- <img src="<?php echo base_url(); ?>assets/img/User.png" width="160" alt="">-->
             <h2 class="title">Bienvenido al sistema</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>

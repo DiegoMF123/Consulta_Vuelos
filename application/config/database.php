@@ -77,8 +77,8 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '192.168.0.15',
-	'username' => 'diegodb',
+	'hostname' => '192.168.0.5',
+	'username' => 'toor',
 	'password' => 'dsmf',
 	'database' => 'db_vuelos',
 	'dbdriver' => 'mysqli',
