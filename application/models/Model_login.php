@@ -10,6 +10,9 @@ class Model_Login extends CI_Model
         where Usuario ='".$user."'
         and Password='".$pass."'
       ");
+      if (!$query->conn_id) {
+        echo 'ERORR DE CONEXIÓN A LA BASE DE DATOS. POR FAVOR VERIFICAR';
+        }
     return $query->result();
 
   }

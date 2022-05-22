@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.127.0.0.1127.0.0.1
 |
 */
-$config['base_url'] = 'http://192.168.0.5:8888/Consulta_Vuelos/';
+$config['base_url'] = 'http://192.168.0.3:8888/Consulta_Vuelos/';
 
 /*
 |--------------------------------------------------------------------------

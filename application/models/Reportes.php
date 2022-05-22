@@ -11,6 +11,9 @@ class Reportes extends CI_Model
     Select * from VuelosPendientes where IdVuelosPendientes =  '". $id ."'
 
       ");
+      if (!$query->conn_id) {
+        echo 'ERORR DE CONEXIÓN A LA BASE DE DATOS. POR FAVOR VERIFICAR';
+        }
     return $query->result();
 
   }

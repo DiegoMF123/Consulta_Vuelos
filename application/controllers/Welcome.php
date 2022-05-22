@@ -12,7 +12,7 @@ class Welcome extends CI_Controller
 		// Tenemos esta libreria session para poder mantener cierto tiempo la session abierta
 		$this->load->library('session');
 		$usuario = $_SESSION["username"];
-
+		$this->load->model('Model_vuelos');
 
 		// Esta varaible rol, almacena el tipo de rol que se va a estar logeando en el switch con los cases, dependiendo el rol,
 		// mostrará las vistas respectivas.
@@ -23,7 +23,8 @@ class Welcome extends CI_Controller
 			switch ($rol) {
 
 				case '1':
-					$this->load->view('usuario/principal');
+					$data = $this->Model_vuelos->vuelos();
+					$this->load->view('usuario/principal', $data);
 					break;
 
 				case '2':
@@ -55,7 +56,7 @@ class Welcome extends CI_Controller
 			}
 		} else {
 			// Si no se cumple, seguirá mostrando el login
-			header("Location: http://192.168.0.5:8888/Consulta_Vuelos/");
+			header("Location: http://192.168.0.3:8888/Consulta_Vuelos/");
 			die();
 		}
 	}
@@ -103,7 +104,7 @@ class Welcome extends CI_Controller
 					);
 					$this->session->set_userdata($newdata);
 					// Si se cumple el logeo y si existen el usuario y la contraseña, redireccionará a esta url
-					header("Location: http://192.168.0.5:8888/Consulta_Vuelos/index.php/welcome");
+					header("Location: http://192.168.0.3:8888/Consulta_Vuelos/index.php/welcome");
 					die();
 				} else {
 					echo "No puedes entrar";
@@ -125,7 +126,7 @@ class Welcome extends CI_Controller
 		// Cerramos la sesión
 		session_destroy();
 		// Nos redireccionará al login
-		header("Location: http://192.168.0.5:8888/Consulta_Vuelos/");
+		header("Location: http://192.168.0.3:8888/Consulta_Vuelos/");
 		die();
 	}
 }

@@ -21,7 +21,7 @@ class Vuelos extends CI_Controller
 
           //$data["datosvuelo"] = $this->Model_vuelos->vuelos();
           $data["response"] = trim(isset($_REQUEST["response"]));
-
+          $data = $this->Model_vuelos->vuelos();
           $this->load->view('usuario/vuelosPendientes', $data);
         } else {
           $codigoVuelo = $_REQUEST["codigoVuelo"];
@@ -32,7 +32,7 @@ class Vuelos extends CI_Controller
             //$codigoVuelo = $_REQUEST["codigoVuelo"];
 
 
-            header("Location: http://192.168.0.5:8888/Consulta_Vuelos/index.php/vuelos?response=1");
+            header("Location: http://192.168.0.3:8888/Consulta_Vuelos/index.php/vuelos?response=1");
             die();
             echo $codigoVuelo;
 
